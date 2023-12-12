@@ -1,0 +1,10 @@
+O que são os decorators:
+Decorators podem adicionar funcionalidades extras a classes e funções
+Basicamente criamos novas funções, que são adicionadas a partir de um @nome
+Esta função será chamada assim que o item que foi definido o decorator for executado
+Para habilitar precisamos adicionar uma configuracao no tsconfig.json
+
+
+Vamos criar um decorator como uma function
+Ele pode trabalhar com argumentos especiais que sao: Target, PropertyKey e descriptor;
+Estes sáo os grandes trunfos do decorator, pois nos dao informacao do local em que ele foi executado

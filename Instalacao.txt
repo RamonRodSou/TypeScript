@@ -1,0 +1,9 @@
+
+Instalar o TypeScript de forma global
+npm install typescript -g
+
+Iniciando o Ts
+tsc -w
+
+Arquivo de configuracao do Ts
+tsc --init
