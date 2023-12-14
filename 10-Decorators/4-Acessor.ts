@@ -4,7 +4,7 @@
 
 
 
-function enumerable (value: boolean){
+function enumerable2 (value: boolean){
     
     return function(
         target:any,
@@ -27,12 +27,12 @@ class Moster {
         this.age = age
     }
 
-    @enumerable(true)
+    @enumerable2(true)
     get showName (){
         return `Nome do monstro: ${this.name}`
     }
 
-    @enumerable(false)
+    @enumerable2(false)
     get showAge () {
         return `Idade do mostro: ${this.age}`
     }

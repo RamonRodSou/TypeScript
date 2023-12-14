@@ -4,6 +4,15 @@ Basicamente criamos novas funções, que são adicionadas a partir de um @nome
 Esta função será chamada assim que o item que foi definido o decorator for executado
 Para habilitar precisamos adicionar uma configuracao no tsconfig.json
 
+Descomentar
+
+"experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
+ 
+ e colocar a versão
+
+"target": "es2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+
+
 
 Vamos criar um decorator como uma function
 Ele pode trabalhar com argumentos especiais que sao: Target, PropertyKey e descriptor;

@@ -1,6 +1,6 @@
-// function m <T> (msg:T){
-//     console.log(msg)
-// }
+function m <T> (msg:T){
+    console.log(msg)
+}
 
 // 1 - Exemplo Decorator
 // esta ligado a funcao da classe

@@ -6,7 +6,7 @@
 // id que tenha no minimo 5 casas  = 00001\
 
 
-function formartNumber {
+function formartNumber (){
 
     return function (target: object, propertyKey: string) {
         

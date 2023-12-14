@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-function enumerable(value) {
+function enumerable2(value) {
     return function (target, propertyKey, descriptor) {
         descriptor.enumerable = value;
     };
@@ -26,10 +26,10 @@ class Moster {
     }
 }
 __decorate([
-    enumerable(true)
+    enumerable2(true)
 ], Moster.prototype, "showName", null);
 __decorate([
-    enumerable(false)
+    enumerable2(false)
 ], Moster.prototype, "showAge", null);
 const myMoster = new Moster('Vampiro', 150);
 console.log(myMoster);
