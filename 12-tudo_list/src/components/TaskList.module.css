@@ -4,12 +4,13 @@
      max-width: 400px;
      margin: 0 auto;
      border-bottom: 1px solid #ccc;
-     padding: 1rem;
+     padding: .1rem;
     }
 
 .actions i {
+    display: flex;
     font-size: 1.2rem;
-    margin: 1.2rem;
+    margin: .2rem;
     cursor: pointer;
     background-color: #292c34;
     color: #fff;

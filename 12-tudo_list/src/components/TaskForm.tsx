@@ -8,32 +8,54 @@ type Props = {
     btnText: string
     taskList: ITask[]
     setTaskList?: React.Dispatch<React.SetStateAction<ITask[]>> // Alterando o estado de uma lista
-}
+    task?: ITask | null
+    handleUpdate?(id: number, title: string, difficulty: number): void
+  }
 
-const TaskForm = ({btnText, taskList, setTaskList}: Props) => {
+const TaskForm = ({btnText, taskList, task, setTaskList, handleUpdate}: Props) => {
 
   const [id, setId] = useState<number>(0)
   const [title, setTitle] = useState<string>('')
   const [difficulty, setdDifficulty] = useState<number>(0)
 
+  // se criar alguma atribuicao sem states, ela vai atualizar toda hora
+  // para evitar isso, usamos o useEffect para gerenciar essa ação
+  // Quando rolar algum evento no 'task' ele vai ser atualizado 1 vez e nao um loop infinito
+  // e vai add as propriedades no modal
+
+  useEffect(() => {
+
+    if (task) {
+      setId(task.id!)
+      setTitle(task.title!)
+      setdDifficulty(task.difficulty!)
+    }
+  },[task])
  
   // Enviando os dados
   const addTaskHandler = (event:FormEvent<HTMLFormElement>) => {
 
     event.preventDefault()
+  
+    if (handleUpdate) {
 
-    const id = Math.floor(Math.random() * 1000) 
-    const newTask: ITask = {id, title, difficulty} 
+      handleUpdate(id, title, difficulty)
+      
+    } else {
 
-    // vai add toda taskList add em um array e tambem a newTask
-    // coloca a  '!' pra forçar, por que sabe quye vai vir um argumento opcional
-    setTaskList!([...taskList, newTask])
-
-    //zerando os inputs
-    setTitle('')
-    setdDifficulty(0)
-    
-    console.log(taskList)
+      const id = Math.floor(Math.random() * 1000) 
+      const newTask: ITask = {id, title, difficulty} 
+  
+      // vai add toda taskList add em um array e tambem a newTask
+      // coloca a  '!' pra forçar, por que sabe quye vai vir um argumento opcional
+      setTaskList!([...taskList, newTask])
+  
+      //zerando os inputs
+      setTitle('')
+      setdDifficulty(0)
+      
+      console.log(taskList)
+    }
   }
 
   // Capiturando o Valur dos inputs
