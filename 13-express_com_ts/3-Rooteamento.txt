@@ -1,0 +1,3 @@
+Podemos utilizar qualquer verbo HTTP nas rotas doo Expressvamos criar uma que funciona a base de POST
+Para isso precisamos trafegar dados em JSON, podemos fazer isso ativando um middleware
+iremos realizar os testes com o Postman

@@ -1,0 +1,8 @@
+Podemos pegar parametros de rotas com express
+vamos utilizar req.parametrosa rota a ser criada precisa ser dinamica
+ou seja, os parametros que estamos querendo receber precisam esta no padrao: :id
+
+Rotas mais complexas
+
+podemos ter rotas com mais de um parametrostodos os dados continuam em req.parametroso padrao é: /algo/:param1/outracoisa/:param2
+teremos entao: param1 e param2 em req

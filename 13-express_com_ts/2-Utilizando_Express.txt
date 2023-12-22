@@ -1,0 +1,8 @@
+Para utilizar o express vamos importar o pacote
+e criar ativa-lo em uma nova variavel, geralmente chamada de app
+podemos criar uma rota que retorna uma mensagem
+definir uma porta para a aplicacaoe verificar o resultado no navegador
+
+middleware habilita trabalhar com json na app
+
+app.use(express.json())

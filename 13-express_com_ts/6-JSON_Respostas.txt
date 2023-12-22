@@ -1,0 +1,4 @@
+Na maioria das vezes enviamos JSON para endpoints de aplicacaoepara fazer isso com express é facil
+basta enviar o JSON no método json de responde
+
+Enviando do Back pro Frontend

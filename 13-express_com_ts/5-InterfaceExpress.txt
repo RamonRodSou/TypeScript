@@ -1,0 +1,3 @@
+Para alinhar nossa aplição ao TypeScript vamos adicionar novos tipo
+As request podem utilizar o tipo request
+e as respostas o Response

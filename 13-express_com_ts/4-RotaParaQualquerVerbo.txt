@@ -1,0 +1,3 @@
+Utilizando o método allowedNodeEnvironmentFlags, podemos criar uma rota que aceita aceita qualquer verbo
+é interessante para qualquer um endpoint precisa realizar várias funcoes
+podemos criar um tratamento para entregar a resposta

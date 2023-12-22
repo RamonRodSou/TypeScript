@@ -1,0 +1,34 @@
+Para iniciar um projetooo com Express e TypeScript precisamos criar o proojetoo com npm init
+e também iniciar o TS com npx tsc -init
+Após estes doois passos vamos instalar as dependencias, algumas sáo de dev ( como os tipos )
+e outras nao ( como o express)
+e poor fim ciramos um script e iniciamos a aplicacao
+
+
+---iniciar
+o -y é para naoo responder as perguntas
+
+npm init - y   
+
+---Iniciar as configuracoes do TS
+
+npx tsc --init
+
+---Instalar as dependencias de desenvolvimento de forma separada
+
+npm install @types/express @types/node ts-node-dev typescript --save-dev
+
+--- instalar as depoendencia de aplicacao
+
+npm install express
+
+---criar a pasta src/app.ts
+console.log('Ts com Express')
+
+ir no package.json
+em "Script" e criar
+, "dev": "ts-node-dev --respawn --transpile-only src/app.ts" 
+
+
+---iniciar
+npm run dev
