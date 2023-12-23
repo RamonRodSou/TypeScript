@@ -1,0 +1,3 @@
+Middleware é um recurso para executar uma funcao entre a execucao de uma rota, por exemplo
+O nosso app.user de json é um Middleware
+podemos utilizar middleware para validacoes, por exemplo

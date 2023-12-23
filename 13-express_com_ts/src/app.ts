@@ -2,7 +2,7 @@
 //console.log('Ts com Express')
 
 // 2- Init express
-import express, {Request, Response} from 'express'
+import express, {NextFunction, Request, Response} from 'express'
 
 const app = express()
 
@@ -85,6 +85,32 @@ app.get("/api/product/:id/review/:reviewId", (req: Request, res: Response) => {
     
         return res.send(`Acessando a review ${reviewId} do produto ${id}`)
 
+})
+
+// 9- router handler
+function getUser(req: Request, res: Response){
+
+    console.log(`Resgatando o usuário com id: ${req.params.id}`)
+    return res.send("Usuario encontrado")
+}
+
+app.get("/api/user/:id", getUser)
+
+//10- Middleware
+function checkUserADM(req: Request, res: Response, next: NextFunction) {
+    
+    if(req.params.id === "1"){
+        console.log('Pode seguir!')
+        next()
+    }else{
+        console.log('Acesso restrito')
+    }
+}
+
+
+app.get("/api/user/:id/acess", checkUserADM, (req: Request, res: Response) =>{
+
+    return res.json({msg: "Bem-vindo a área administrativa!"})
 })
 
 app.listen(3000, () => {
