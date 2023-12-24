@@ -1,0 +1,2 @@
+Podemos estabelecer os argumentos que vem pelo request e vao pela response
+Para isso vamos utilizar os Generics de Response e requestque sao as interfaces disponibilizdas pelo Express

@@ -1,3 +1,8 @@
 Middleware é um recurso para executar uma funcao entre a execucao de uma rota, por exemplo
 O nosso app.user de json é um Middleware
 podemos utilizar middleware para validacoes, por exemplo
+
+-- Middleware para todas as rotas
+
+Para criar um middleware que é executado em todas as rotas vamos utilizar o método user
+Criamos uma funcao e atrelamos ao métododesta maneira todas as rotas terao acao do nosso middleware

@@ -9,6 +9,14 @@ const app = express()
 //3 rotas com POST
 app.use(express.json())
 
+//11 - middleware para todas as rotas
+function showPath (req: Request, res: Response, next: NextFunction){
+    console.log(req.path)
+    next()
+}
+
+app.use(showPath)
+
 // 2- Init express
 app.get('/', (req, res) => {
     return res.send('Hello Express!')
@@ -107,14 +115,24 @@ function checkUserADM(req: Request, res: Response, next: NextFunction) {
     }
 }
 
-
 app.get("/api/user/:id/acess", checkUserADM, (req: Request, res: Response) =>{
 
     return res.json({msg: "Bem-vindo a área administrativa!"})
 })
 
+//12 - Req e Res com generics
+app.get ("/api/user/:id/details/:name", 
+        (req:Request <{id: string; name: string}>,
+        res: Response <{status: boolean}>) => {
+
+            console.log(`ID: ${req.params.id}`)
+            console.log (`Name: ${req.params.name}`)
+
+            return res.json({status: true})
+        }) 
+
 app.listen(3000, () => {
     console.log('Aplicacao de Ts = Express Funcionando!')
 })
 
-
+    

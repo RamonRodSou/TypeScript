@@ -1,0 +1,4 @@
+Tratando erros
+Para tratar possiveis erros utilizamos blocos try catch
+desta maneira podemos detectar algum problema e retorna uma respoosta para o usuario
+ou ate mesmo criar um log no sistema
