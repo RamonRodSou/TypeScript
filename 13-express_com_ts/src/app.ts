@@ -131,6 +131,14 @@ app.get ("/api/user/:id/details/:name",
             return res.json({status: true})
         }) 
 
+app.get("/api/error", (req: Request, res: Response) => {
+    try{
+        throw new Error("Algo deu errado!")
+    } catch (e: any){
+        res.status(500).json({msg: e.message})
+    }
+})
+
 app.listen(3000, () => {
     console.log('Aplicacao de Ts = Express Funcionando!')
 })
