@@ -1,0 +1,4 @@
+# Ignora, e nao envia pro git, o .env que sao minhas informacoes sensives, node_modules que é muito pesado.
+
+.env
+node_modules

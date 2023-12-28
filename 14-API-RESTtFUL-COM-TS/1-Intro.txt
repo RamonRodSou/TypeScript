@@ -1,0 +1,33 @@
+iniciar o projetoo
+npm init -y
+
+Typescript
+tsc --init
+
+dependencias
+-config - manusear as configuracoes da app
+-dotenv - variasves de ambiencias / usuarias/ bd
+-express-validatoor - para fazer as validacoes com o backend p/ impedir registro de ser inseridos de forma errada
+-mongoose - trabalhar com o banco de dados mongodb, n precisar instalar, vamos conectar com o atlas nuveem
+-morgon - para pacotes de relatorios
+-winston - para log de app
+
+npm install config dotenv express express-validator mongoose morgan winston
+ 
+dependencias de desenvolvimento
+npm install @types/config @types/express @type/mongoose @types/morgan @types/node ts-node-dev typescript --save-dev
+
+criar pasta src/app.ts
+
+abrir package.json
+em "scripts":
+
+criar
+
+"dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+
+
+iniciar npm run dev
+
+# gitignore = Ignora, e nao envia pro git, o .env que sao minhas informacoes sensives, node_modules que é muito pesado.
+# .env = minhas informacoes sensiveis

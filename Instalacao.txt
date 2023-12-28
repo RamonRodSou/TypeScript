@@ -7,3 +7,7 @@ tsc -w
 
 Arquivo de configuracao do Ts
 tsc --init
+
+caso der erro
+npm install -g ts-node-dev
+npm install --save-dev ts-node-dev
