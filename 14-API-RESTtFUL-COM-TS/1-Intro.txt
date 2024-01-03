@@ -1,3 +1,8 @@
+Criando um API no Padrao de Arquitetura MVC - Model View Control, Seguindo o Padrao Restfull para Criar API
+
+Foi Usado:
+Express, Express Validato, Logger, Winston, Morgan, MVC, Mongoose, Atlas Cloud
+
 iniciar o projetoo
 npm init -y
 
